@@ -13,20 +13,22 @@ string cards[] = {
         "2S", "3S", "4S", "5S", "6S", "7S", "8S", "9S", "10S", "JS", "QS", "KS", "AS"
 };
 
-int getCardUser();
+int getCardValUser();
 int userCard;
 int cardNum = rand() % 52;
+string card;
 int cardVal;
 
 int main()
 {
     while (1) {
-        
-        
+        cout << getCardValUser();
+        break;
     }
 }
 
-int getCardUser(){
+int getCardValUser(){
+    card = cards[cardNum];
     for (int i = 0; i < 52; i++) {
         for (int j = 0; j < cards[i].length(); j++) {
             if (cards[i][j] == 'S' ||
@@ -35,10 +37,13 @@ int getCardUser(){
                 cards[i][j] == 'K')
             {
                 cardVal = 10;
+                cout << cardVal;
+                cout << card;
             }
             
         }
     }
+    return cardVal;
 }
 
 
